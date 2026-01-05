@@ -1,0 +1,23 @@
+patch:
+  switches:
+    - name: ascii_mode
+      reset: 1
+      states: [ 中, A ]
+    - name: emoji_suggestion
+      reset: 1
+      states: [ "😣️", "😁️" ]
+    - name: full_shape
+      reset: 0
+      states: [ 半角, 全角 ]
+    - name: tone_display
+      reset: 0
+      states: [ 声调, 声起 ]
+    - name: transcription
+      reset: 0
+      states: [ 简体, 繁体 ]
+    - name: ascii_punct
+      reset: 0
+      states: [ ¥, $ ]
+  "engine/translators/melt_eng":
+    enable_completion: true # 开启英文提示
+    initial_quality: 1.1
